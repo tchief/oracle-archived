@@ -23,6 +23,7 @@ jobs:
 
     - name: Build
       run: |
+        cd client
         npm install
         npm run-script deploy
 
@@ -31,4 +32,4 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: dist/oracle
+        FOLDER: client/dist/oracle
